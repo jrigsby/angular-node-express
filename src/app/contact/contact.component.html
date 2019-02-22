@@ -1,0 +1,101 @@
+<title>TCR Development - Windows & Web Software Developers - [Contact]</title>
+<app-hero></app-hero>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-7">
+      <div class="alert alert-success alert-dismissible" role="alert" *ngIf="model!=null && model.sent">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="zmdi zmdi-close"></i></button>
+        <strong><i class="zmdi zmdi-check"></i> Success!</strong> Your message has been sent. Thank you!
+      </div>
+      <div class="alert alert-success alert-dismissible" role="alert" *ngIf="model!=null && model.error">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="zmdi zmdi-close"></i></button>
+        <strong><i class="zmdi zmdi-close-circle"></i> Error!</strong> Your message was not delivered. Please contact <a href="mailto:support@tcrdev.com">support@tcrdev.com</a> for assistance.
+      </div>
+      <div [ngClass]="(service.wow)?'card card-primary animated fadeInUp animation-delay-7':'card card-primary'">
+      <div class="ms-hero-bg-primary ">
+        <h2 class="text-center no-m pt-1 pb-1 color-white index-1">Contact</h2>
+      </div>
+      <div class="card-block">
+        <form class="form-horizontal" [formGroup]="myform" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <div class="form-group" [ngClass]="{'has-danger': name.invalid && (name.dirty || name.touched || submitted),'has-success': name.valid && (name.dirty || name.touched || submitted)}">
+              <label for="name" class="col-md-2 control-label">Name</label>
+              <div class="col-md-10">
+                <input type="text" formControlName="name" class="form-control" id="name" placeholder="Name" required>
+                <span class="text-danger" *ngIf="name.errors && (name.dirty || name.touched || submitted)">
+                  <p *ngIf="name.errors.required">Name is required</p>
+                </span>
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': email.invalid && (email.dirty || email.touched || submitted),'has-success': email.valid && (email.dirty || email.touched || submitted)}">
+              <label for="email" class="col-md-2 control-label">Email</label>
+              <div class="col-md-10">
+                <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" required>
+                <span class="text-danger" *ngIf="email.errors && (email.dirty || email.touched || submitted)">
+                  <p *ngIf="email.errors.required">Email is required</p>
+                  <p *ngIf="email.errors.pattern">Email is not a valid format ex. name@domain.com</p>
+                </span>
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': phone.invalid && (phone.dirty || phone.touched || submitted),'has-success': phone.valid && (phone.dirty || phone.touched || submitted)}">
+              <label for="phone" class="col-md-2 control-label">Phone</label>
+              <div class="col-md-10">
+                <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="(###) ###-####" required>
+                <span class="text-danger" *ngIf="phone.errors && (phone.dirty || phone.touched || submitted)">
+                  <p *ngIf="phone.errors.required">Phone is required</p>
+                </span>
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': subject.invalid && (subject.dirty || subject.touched || submitted),'has-success': subject.valid && (subject.dirty || subject.touched || submitted)}">
+              <label for="subject" class="col-md-2 control-label">How can we help?</label>
+              <div class="col-md-10">
+                <select class="form-control" formControlName="subject" id="subject">
+                  <option value="">Please select a reason of interest</option>
+                  <option>Support for a TCR product</option>
+                  <option>Inquiry about programming services and pricing options</option>
+                  <option>Inquiry about WealthStation PlanAdvisor features and licensing</option>
+                  <option>Inquiry about ManageIT software features and price</option>
+                  <option>Inquiry about BugTracker software features and price</option>
+                  <option>Other</option>
+                </select>
+                <span class="text-danger" *ngIf="subject.errors && (subject.dirty || subject.touched || submitted)">
+                  <p *ngIf="subject.errors.required">Subject is required</p>
+                </span>
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': message.invalid && (message.dirty || message.touched || submitted),'has-success': message.valid && (message.dirty || message.touched || submitted)}">
+              <label for="message" class="col-md-2 control-label">Message</label>
+              <div class="col-md-10">
+                <textarea formControlName="message" class="form-control" rows="5" id="message" placeholder="Your message..."></textarea>
+                <span class="text-danger" *ngIf="message.errors && (message.dirty || message.touched || submitted)">
+                  <p *ngIf="message.errors.required">Message is required</p>
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-10 col-md-offset-2">
+                <button type="submit" class="btn btn-raised btn-primary" title="Send">Send</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-5">
+    <div [ngClass]="(service.wow)?'card card-primary animated fadeInUp animation-delay-7':'card card-primary'">
+      <div class="card-block">
+        <div class="text-center mb-2">
+          <h3 class="no-m ms-site-title">TCR Development, LLC</h3>
+        </div>
+        <address class="no-mb">
+          <p><i class="color-danger-light zmdi zmdi-pin mr-1"></i> 4040 Woodcock Drive Suite 250</p>
+          <p><i class="color-warning-light zmdi zmdi-map mr-1"></i> Jacksonville, FL 32207</p>
+          <p><i class="color-info-light zmdi zmdi-email mr-1"></i> <a href="mailto:support@tcrdev.com" title="Send e-mail" rel="nofollow">support@tcrdev.com</a></p>
+          <p><i class="color-royal-light zmdi zmdi-phone mr-1"></i>212 402 1880 </p>
+        </address>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- container -->

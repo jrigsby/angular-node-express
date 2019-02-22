@@ -1,0 +1,26 @@
+<header class="ms-header ms-header-primary">
+  <div class="container container-full">
+    <div class="ms-title" >
+      <a routerLink="/home">
+        <h1>
+          <span [ngClass]="(service.animated)?'animated fadeInLeft animation-delay-6 d-inline':'d-inline'">T</span><span [ngClass]="(service.animated)?'animated fadeInUp animation-delay-7 d-inline':'d-inline'">C</span><span [ngClass]="(service.animated)?'animated zoomInDown animation-delay-12 d-inline':'d-inline'">R</span> <span [ngClass]="(service.animated)?'animated fadeInRight animation-delay-4 d-inline':'d-inline'">Development</span>
+        </h1>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary"></nav>
+
+<router-outlet></router-outlet>
+<!-- Routed views go here -->
+
+<img src="../assets/img/logo.png" class="rotate180 hidden-xs" alt="watermark" />
+<footer class="ms-footer">
+  <div class="container">
+    <p>&copy; 2017 TCR Development, LLC. All rights reserved.</p>
+  </div>
+</footer>
+<div class="btn-back-top">
+  <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised" title="Return to top"><i class="zmdi zmdi-long-arrow-up"></i></a>
+</div>

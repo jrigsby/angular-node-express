@@ -1,0 +1,31 @@
+<div class="container container-full">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#navbar" title="Menu">
+      <span class="fa fa-bars"></span>
+    </button>
+    <a class="navbar-brand" title="Home" routerLink="/home">
+        <span class="ms-title">
+          <span [ngClass]="(service.animated)?'animated fadeInLeft animation-delay-6 d-inline':'d-inline'">T</span><span [ngClass]="(service.animated)?'animated fadeInUp animation-delay-7 d-inline':'d-inline'">C</span><span [ngClass]="(service.animated)?'animated zoomInDown animation-delay-12 d-inline':'d-inline'">R</span> <span [ngClass]="(service.animated)?'animated fadeInRight animation-delay-4 d-inline':'d-inline'">Development</span>
+        </span>
+    </a>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li *ngIf="service.title!='Home'" [ngClass]="(service.title=='Home')?'active':''">
+        <a [ngClass]="(service.animated)?'animated fadeIn animation-delay-4':''" title="Home" routerLink="/home">Home</a>
+      </li>
+      <li [ngClass]="(service.title=='Software')?'active':''">
+        <a [ngClass]="(service.animated)?'animated fadeIn animation-delay-5':''" title="Software" routerLink="/software">Software</a>
+      </li>
+      <li [ngClass]="(service.title=='Projects')?'active':''">
+        <a [ngClass]="(service.animated)?'animated fadeIn animation-delay-6':''" title="Projects" routerLink="/projects">Projects</a>
+      </li>
+      <li [ngClass]="(service.title=='Technology')?'active':''">
+        <a [ngClass]="(service.animated)?'animated fadeIn animation-delay-7':''" title="Technology" routerLink="/technology">Technology</a>
+      </li>
+      <li [ngClass]="(service.title=='Contact')?'active':''">
+        <a [ngClass]="(service.animated)?'animated fadeIn animation-delay-8':''" title="Contact" routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+  </div> <!-- navbar-collapse collapse -->
+</div> <!-- container -->

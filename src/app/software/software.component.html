@@ -1,0 +1,50 @@
+<title>TCR Development - Windows & Web Software Developers - [Software]</title>
+<app-hero></app-hero>
+<div class="container mt-4">
+  <p [ngClass]="(service.wow)?'lead color-primary mb-2 aca wow fadeInDown animation-delay-2':'lead color-primary mb-2'">
+    TCR Development provides several pre-built software
+    packages. We manage IT and software for 401k administrators and often provide ongoing support for the projects we develop.
+    We make this software available as-is or can customize it to your needs.
+  </p>
+  <div [ngClass]="(service.wow)?'aca wow fadeInDown animation-delay-2 mb-4':'mb-4'">
+    <div class="alert alert-info" role="alert">
+      <i class="fa fa-envelope"></i>Existing clients looking for support should contact <a href="mailto:support@tcrdev.com" title="Send e-mail" rel="nofollow">support@tcrdev.com</a>
+      or use our <a routerLink="/contact" title="Go to contact page">contact page</a>. Please include your licensed company name in the correspondence. Thank you!
+    </div>
+    <h3>Manage IT - Database Backup/Archiving</h3>
+    <p>
+      Create and schedule Oracle database backup and archive jobs across multiple systems.
+    </p>
+    <ul>
+      <li>Schedule jobs by hour and day or run immediately.</li>
+      <li>Get notification emails to multiple users on export success or failure.</li>
+      <li>Dashboard shows the last log number so that you can track the status of primary and standby system.</li>
+      <li>Hot backups.</li>
+      <li>Responsive web front end makes database management available on the go.</li>
+      <li>Angular front end that looks and works well on any device.</li>
+      <li>Each database server has a Windows Service running to manage the export process.</li>
+    </ul>
+  </div>
+  <div [ngClass]="(service.wow)?'aca wow fadeInDown animation-delay-4 mb-4':'mb-4'">
+    <h3>Bug Tracker - Software Life Cycle Management</h3>
+    <p>
+      Track software bugs and requirements throughout the software life cycle.
+    </p>
+    <ul>
+      <li>
+        Filter by program. Handles multiple programs, users, and versions.
+      </li>
+      <li>
+        Filter by status (closed, in-design, in-programmming, etc).
+      </li>
+      <li>
+        Prioritize bugs and assign to individual users based on life cycle.
+      </li>
+      <li>
+        Often used as a test bed for the latest technologies. Testing front end
+        technologies like Knockout, Aurelia, and currently Angular as well as back end like .NET Core and node.js.
+      </li>
+    </ul>
+  </div>
+</div>
+<app-carousel></app-carousel>
